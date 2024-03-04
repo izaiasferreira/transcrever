@@ -17,7 +17,7 @@ RUN pip install gunicorn
 COPY . .
 
 # Exponha a porta em que o Gunicorn irá escutar
-EXPOSE 8000
+EXPOSE 9070
 
 # Comando para iniciar o Gunicorn e executar o aplicativo Flask
-CMD ["gunicorn", "-b", "0.0.0.0:3000", "main:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:9070", "main:app"]
