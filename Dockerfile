@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 8000
 
 # Comando para iniciar o Gunicorn e executar o aplicativo Flask
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "main:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:3000", "main:app"]

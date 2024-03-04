@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return '<center><h1>[POST] /transcrever with "audio" form file (only wav)</h1></center>'
+    return '<center><h1>[POST] /transcrever with "audio" form file (only wav)</h1></center>', 200, {'Content-Type': 'text/html; charset=utf-8'}
 
 @app.route('/transcrever', methods=['POST'])
 def transcrever():
