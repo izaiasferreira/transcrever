@@ -1,5 +1,5 @@
 # Use a imagem base do Python
-FROM python:3.10-slim
+FROM python:3
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -17,7 +17,7 @@ RUN pip install gunicorn
 COPY . .
 
 # Exponha a porta em que o Gunicorn irá escutar
-EXPOSE 9070
+EXPOSE 8000
 
 # Comando para iniciar o Gunicorn e executar o aplicativo Flask
-CMD ["gunicorn", "-b", "0.0.0.0:9070", "main:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "main:app"]
